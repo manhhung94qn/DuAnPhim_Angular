@@ -13,6 +13,9 @@ import { HeaderMenuComponent } from './header/header-menu/header-menu.component'
 import { MenuSlideComponent } from './home/menu-slide/menu-slide.component';
 import { ItemFilmComponent } from './home/item-film/item-film.component';
 import { MoviePlayingComponent } from './home/movie-playing/movie-playing.component';
+import { FilmsService } from '../_Core/Service/films.service';
+
+
 
 @NgModule({
   declarations: [
@@ -28,6 +31,9 @@ import { MoviePlayingComponent } from './home/movie-playing/movie-playing.compon
     CommonModule,
     CusstomerTemplateRoutingModule,
     MaterialModule
+  ],
+  providers: [
+    FilmsService
   ]
 })
 export class CustomerTeamplateModule { }
