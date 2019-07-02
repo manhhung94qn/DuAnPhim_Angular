@@ -1,62 +1,135 @@
 
 @import "../../../_Core/Scss/Variable.scss";
-.navbar {
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-    background: rgb(255, 255, 255, 0.2);
-    a {
-        font-size: 1.25em;
-        &.active {
-            font-weight: 525;
-            color: $color-text-menu;
-        }
-        .image-logo {
-            height: 60px;
+
+nav {
+    padding: 0 15px;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        padding: 0;
+        img {
+            height: 75px;
         }
     }
-
-    .form-search {
-        display: flex;
-        justify-content: flex-end;
-        
-        .serch-container {
-            display: block;
-            position: relative;
-            input {
-                width: 100px;
-                transition: .5s;
-                &:hover, &:focus {
-                    width: 500px;
-                    max-width: 80%;
+    .menu {
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin: 0;
+            li {
+                white-space: nowrap;
+                a {
+                    display: block;
+                    padding: 0 10px;
+                    text-decoration: none;
+                    &.active {
+                        font-weight: 600;
+                    }
+                }
+                &.user-nav-item {
+                    display: none;
                 }
             }
-            button {
-                position: absolute;
-                right: 0;
-                top: 0;
-                z-index: -1;
+            
+        }
+    }
+    .search {
+        width: 100%;
+        padding-left: 50px;
+        form {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            input {
+                width: 100px;
+                transition: 0.75s;
+                &:focus {
+                    width: 100%;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    .user {
+        color: $color-text-menu;
+    }
+    .icon-show-menu {
+        display: none;
+    }
+
+}
+
+@media all and (max-width:768px){
+    nav {
+        padding: 0 5px;
+        position: relative;
+        .menu {
+            position: absolute;
+            z-index: 100;
+            background: white;
+            display: block;
+            top: 100%;
+            right: 0px;
+            min-width: 0;
+            width: 0;
+            overflow: hidden;
+            transition: 0.5s;
+            &.active {
+                min-width: 200px;
             }
 
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                width: 100%;
+                padding: 0;
+                li {
+                    border-bottom: 1px solid rgba(51, 51, 51, 0.658);
+                    width: 100%;
+                    padding-top: 20px;
+                }
+                li {
+                    &.user-nav-item {
+                        display: block;
+                    }
+                }
+            }
         }
-    }
-
-}
-@media all and (min-width: 768px){
-    .form-inline {
-        input {
-            background-color: rgba(255, 255, 255, 0.2);
-            width: 100px;
-        }
-    }
-}
-
-@media all and (max-width: 768px){
-    .navbar {
-        a {
-            margin: auto;
-            .image-logo {
-                height: 60px;
+        .search {
+            width: 100%;
+            form {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                input {
+                    width: 100%;
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }    
+        .user {
+            display: none;
+        }    
+        .icon-show-menu {
+            display: block;
+            mat-button-toggle {
+                border-radius: 3px;
+                border: 2px solid $color-text-menu;
+                background-color: $color-text-menu;
+                color: white;
+                &.mat-button-toggle-checked {
+                    background-color: white;
+                    color: $color-text-menu;                    
+                }
             }
         }
     }

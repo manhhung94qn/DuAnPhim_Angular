@@ -1,38 +1,64 @@
-<nav class="navbar navbar-expand-md navbar-light">
-  <a class="navbar-brand" [routerLink]="[ '/' ]">
+<nav>
+  <a class="navbar-brand logo" [routerLink]="[ '/' ]">
     <img src="./assets/images/logo.png" class="image-logo" alt="HungKing.IO">
   </a>
 
-  <form class="form-inline form-search my-2 my-lg-0">
-    <div class="serch-container">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <!-- <button class="btn my-2 my-sm-0" type="submit">S</button> -->
-    </div>
-  </form>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" [routerLink]="[ '/' ]">Home</a>
+  <div class="menu" [ngClass]="{'active': VarShowMenuOnPhone}" data-phoneShow="false">
+    <ul>
+      <li class="user-nav-item">
+        <a  routerLinkActive="active" [routerLink]="[ '/' ]">Đăng nhập</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" [routerLink]="[ '/showtimes' ]">Lịch chiếu</a>
+      <li class="">
+        <a class="" routerLinkActive="active" [routerLink]="[ '/' ]">Trang Chủ</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" [routerLink]="[ '/cinema' ]">Rạp chiếu</a>
+      <li >
+        <a  routerLinkActive="active" [routerLink]="[ '/showtimes' ]">Lịch Chiếu</a>
+      </li>
+      <li>
+        <a  routerLinkActive="active" [routerLink]="[ '/cinema' ]">Rạp Chiếu</a>
+      </li>
+      <li>
+        <a  routerLinkActive="active" [routerLink]="[ '/cinema' ]">Tin Tức</a>
+      </li>
+      <li>
+        <a routerLinkActive="active" [routerLink]="[ '/cinema' ]">Liên Hệ</a>
       </li>
     </ul>
-    <form class="form-inline form-search my-2 my-lg-0">
-      <div class="serch-container">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <!-- <button class="btn my-2 my-sm-0" type="submit">S</button> -->
-      </div>
-    </form>
-    <div class="mr-2">Chào khách</div>
   </div>
-</nav>
 
+
+  <div class="search mr-3">
+    <form class="form-inline form-search my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search">
+    </form>
+  </div>
+
+  <div class="user">
+    <ng-container *ngIf="true; else UserTeamplate">
+      <button mat-button [matMenuTriggerFor]="beforeMenu">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon>Chào khách
+      </button>
+      <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <button mat-menu-item>Đăng nhập</button>
+        <button mat-menu-item>Đăng kí</button>
+      </mat-menu>
+    </ng-container>
+    <ng-template #UserTeamplate>
+      <button mat-button [matMenuTriggerFor]="beforeMenu">Admin</button>
+      <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <button mat-menu-item>Đăng nhập</button>
+        <button mat-menu-item>Đăng kí</button>
+      </mat-menu>
+    </ng-template>
+
+
+
+  </div>
+
+  <div class="icon-show-menu">
+    <mat-button-toggle value="bold" (click)="showMenuOnPhone()">
+      <mat-icon aria-hidden="false" aria-label="Example home icon">menu</mat-icon>
+    </mat-button-toggle>
+  </div>
+
+</nav>
