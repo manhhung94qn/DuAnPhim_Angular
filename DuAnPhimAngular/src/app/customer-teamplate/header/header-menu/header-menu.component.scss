@@ -1,0 +1,63 @@
+
+@import "../../../_Core/Scss/Variable.scss";
+.navbar {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background: rgb(255, 255, 255, 0.2);
+    a {
+        font-size: 1.25em;
+        &.active {
+            font-weight: 525;
+            color: $color-text-menu;
+        }
+        .image-logo {
+            height: 60px;
+        }
+    }
+
+    .form-search {
+        display: flex;
+        justify-content: flex-end;
+        
+        .serch-container {
+            display: block;
+            position: relative;
+            input {
+                width: 100px;
+                transition: .5s;
+                &:hover, &:focus {
+                    width: 500px;
+                    max-width: 80%;
+                }
+            }
+            button {
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: -1;
+            }
+
+        }
+    }
+
+}
+@media all and (min-width: 768px){
+    .form-inline {
+        input {
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 100px;
+        }
+    }
+}
+
+@media all and (max-width: 768px){
+    .navbar {
+        a {
+            margin: auto;
+            .image-logo {
+                height: 60px;
+            }
+        }
+    }
+}

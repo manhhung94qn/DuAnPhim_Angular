@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./app/_Core/Scss/_Variable.scss";
+html, body {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: $font-string;
+    color: $color-text;
+}
+* {
+    box-sizing: border-box;
+}
