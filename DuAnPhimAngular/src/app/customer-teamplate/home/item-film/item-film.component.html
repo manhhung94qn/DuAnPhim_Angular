@@ -1,3 +1,19 @@
-<div>
-    <div><img [src]="film.HinhAnh" alt=""></div>
+<div (mouseover)="getHover($event)">
+    <div class="box-img">
+        <div class="over-flow"></div>
+        <img [src]="film.avatar" alt="">
+        <div class="play">
+            <div class="icon"></div>
+        </div>
+    </div>
+    <div class="box-select">
+        <div class="content">
+            <p>{{film.name}}</p>
+        </div>
+        <div class="button">
+            <button mat-raised-button class="btn-select buy">Mua Vé</button>
+            <button mat-raised-button class="btn-select view">Xem chi tiết</button>
+        </div>
+    </div>
+
 </div>

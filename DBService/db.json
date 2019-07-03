@@ -1,0 +1,162 @@
+{
+    "Films": [
+        {
+            "id": 1,
+            "codeFilm": "1",
+            "name": "Annabelle: Ác Quỷ Trở Về - Annabelle Comes Home Annabelle dfasf sa erwe safs: Ác Quỷ Trở Về - Annabelle Comes Home Annabelle: Ác Quỷ Trở Về - Annabelle Comes Home",
+            "movieDate": "1994-12-24T17:00:00.000Z",
+            "avatar": "./assets/images/avatar_phim/1.jpg",
+            "longTime": "110",
+            "countLike": 0,
+            "price": 1000000
+        },
+        {
+            "id": 2,
+            "codeFilm": "2",
+            "name": "Ký Sinh Trùng - Parasite",
+            "movieDate": "1994-12-24T17:00:00.000Z",
+            "avatar": "./assets/images/avatar_phim/2.jpg",
+            "longTime": "110",
+            "countLike": 0,
+            "price": 1000000
+        },
+        {
+            "id": 3,
+            "codeFilm": "3",
+            "name": "Annabelle: Ác Quỷ Trở Về - Annabelle Comes Home",
+            "movieDate": "1994-12-24T17:00:00.000Z",
+            "avatar": "./assets/images/avatar_phim/3.jpg",
+            "longTime": "110",
+            "countLike": 0,
+            "price": 1000000
+        },
+        {
+            "id": 4,
+            "codeFilm": "4",
+            "name": "Annabelle: Ác Quỷ Trở Về - Annabelle Comes Home",
+            "movieDate": "1994-12-24T17:00:00.000Z",
+            "avatar": "./assets/images/avatar_phim/4.jpg",
+            "longTime": "110",
+            "countLike": 0,
+            "price": 1000000
+        },
+        {
+            "id": 5,
+            "codeFilm": "5",
+            "name": "Annabelle: Ác Quỷ Trở Về - Annabelle Comes Home",
+            "movieDate": "1994-12-24T17:00:00.000Z",
+            "avatar": "./assets/images/avatar_phim/5.jpg",
+            "longTime": "110",
+            "countLike": 0,
+            "price": 1000000
+        },
+        {
+            "id": 6,
+            "codeFilm": "6",
+            "name": "Annabelle: Ác Quỷ Trở Về - Annabelle Comes Home",
+            "movieDate": "1994-12-24T17:00:00.000Z",
+            "avatar": "./assets/images/avatar_phim/6.jpg",
+            "longTime": "110",
+            "countLike": 0,
+            "price": 1000000
+        }
+    ],
+    "FilmsDetails": [
+        {
+            "id": 1,
+            "codeFilm": "1",
+            "name": "Annabelle: Ác Quỷ Trở Về - Annabelle Comes Home",
+            "description": "Annabelle: Ác quỷ trở về (tên tiếng Anh gốc: Annabelle Comes Home) là một bộ phim kinh dị siêu nhiên Mỹ năm 2019 dựa trên truyền thuyết về búp bê Annabelle. Đây là phần tiếp theo của bộ phim năm 2017 Annabelle: Tạo vật quỷ dữ, là phim thứ ba trong series Annabelle và là phần thứ bảy trong Vũ trụ The Conjuring. Bộ phim được Gary Dauberman đạo diễn cùng biên kịch với James Wan. Bộ phim có sự tham gia của nhiều sao lồng tiếng như Mckenna Grace, Madison Iseman, Katie Sarife, Patrick Wilson và Vera Farmiga.[1] Việc phát hành do Warner Bros. Pictures, New Line Cinema lên kế hoạch và thực hiện.",
+            "countLike": 0,
+            "longTime": "110",
+            "price": 1000000,
+            "avatar": "./assets/images/avatar_phim/1.jpg",
+            "moreImage": [
+                "./assets/images/avatar_phim/1.jpg"
+            ]
+        }
+    ],
+    "FilmCommentP": [
+        {
+            "id": 1,
+            "codeFilm": "1",
+            "userName": "manhhung94qn",
+            "content": "Phim hay quá",
+            "timeCreate": "",
+            "FilmCommentC": [
+                {
+                    "userName": "admin",
+                    "content": "Ủng hộ chúng tôi nhiều hơn nhé",
+                    "timeCreate": ""
+                }
+            ]
+        }
+    ],
+    "ShowTimes": [
+        {
+            "id": 1,
+            "codeFilm": 1,
+            "lableTime": [
+                {
+                    "timeStart": ""
+                }
+            ]
+        }
+    ],
+    "User": [
+        {
+            "id": 1,
+            "userName": "Guest",
+            "password": "",
+            "FullName": "",
+            "email": "",
+            "phone": "",
+            "status": true,
+            "avatar": "./"
+        },
+        {
+            "id": 2,
+            "userName": "manhhung94qn",
+            "password": "123",
+            "FullName": "Đào Mạnh Hùng",
+            "email": "manhhung94qn@gmail.com",
+            "phone": "",
+            "status": true,
+            "avatar": "./"
+        }
+    ],
+    "OderFilms": [
+        {
+            "id": 1,
+            "codeUser": 2,
+            "codeFilms": 1,
+            "filmName": "Annabelle: Ác Quỷ Trở Về - Annabelle Comes Home",
+            "quantity": 2,
+            "sumPrice": 1000000
+        },
+        {
+            "id": 2,
+            "codeUser": 2,
+            "codeFilms": 1,
+            "filmName": "Annabelle: Ác Quỷ Trở Về - Annabelle Comes Home",
+            "quantity": 2,
+            "sumPrice": 1000000
+        },
+        {
+            "id": 3,
+            "codeUser": 1,
+            "codeFilms": 1,
+            "filmName": "Annabelle: Ác Quỷ Trở Về - Annabelle Comes Home",
+            "quantity": 2,
+            "sumPrice": 1000000
+        }
+    ],
+    "Admin": [
+        {
+            "id": 1,
+            "userName": "admin",
+            "password": "123",
+            "status": true
+        }
+    ]
+}

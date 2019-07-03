@@ -11,5 +11,16 @@ export class ItemFilmComponent implements OnInit {
   @Input("film") film;
   ngOnInit() {
   }
+  divHover: boolean = true;
+  getHover(e){
+    console.log(e.type);
+    console.log(e)
+    if(e.type == "mouseover"){
+      this.divHover = false;
+    }
+    else {      
+      this.divHover = false;
+    }
+  }
 
 }

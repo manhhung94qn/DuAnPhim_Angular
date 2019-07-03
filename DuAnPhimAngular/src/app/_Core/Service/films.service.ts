@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 
 export class FilmsService {
 
-  private API: string = "http://svcy2.myclass.vn/api/QuanLyPhim/LayDanhSachPhim?MaNhom=GP09";
+  private API: string = "http://localhost:3000/Films";
 
   constructor(private _Http: HttpClient) { }
 
