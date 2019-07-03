@@ -15,4 +15,12 @@ export class FilmsService {
   getAllFilms(): Observable<any>{
     return this._Http.get(this.API)
   }
+
+  handlerError(err){
+    if(err.error instanceof Error){
+      console.log("client send erro: " + err.Error.message);
+    } else {
+      console.log(`Serve send error: ${err.status}`)
+    }
+  }
 }

@@ -82,11 +82,15 @@ div {
         .button {
             display: none;
             width: 100%;
-            justify-content: space-between;
+            justify-content: space-around;
             .btn-select {                
                 background-color: $color-text-menu;
-                width: 49%;
-                height: 3em;
+                width: 100%;
+                height: 3.5em;
+                font-size: 1.5em;
+                font-weight: 500;
+                border: none;
+                outline: none;
             }
         }
     }

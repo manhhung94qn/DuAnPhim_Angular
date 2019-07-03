@@ -4,6 +4,7 @@ import { CustomerTeamplateComponent } from './customer-teamplate.component';
 import { HomeComponent } from './home/home.component';
 import { ShowTimesComponent } from './show-times/show-times.component';
 import { CinemaComponent } from './cinema/cinema.component';
+import { FilmDetailComponent } from './film-detail/film-detail.component';
 
 const routes: Routes = [
     {
@@ -12,7 +13,8 @@ const routes: Routes = [
         children: [
             {path: "", component: HomeComponent},
             {path: "showtimes", component: ShowTimesComponent},
-            {path: "cinema", component: CinemaComponent}
+            {path: "cinema", component: CinemaComponent},
+            {path: "detail", component: FilmDetailComponent}
         ]
     }
 ];

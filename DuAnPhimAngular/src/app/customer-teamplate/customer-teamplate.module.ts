@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../_Core/Modules/material/material.module';
+import { FormsModule } from '@angular/forms';
 
 import { CustomerTeamplateComponent } from './customer-teamplate.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,7 +14,9 @@ import { HeaderMenuComponent } from './header/header-menu/header-menu.component'
 import { MenuSlideComponent } from './home/menu-slide/menu-slide.component';
 import { ItemFilmComponent } from './home/item-film/item-film.component';
 import { MoviePlayingComponent } from './home/movie-playing/movie-playing.component';
+
 import { FilmsService } from '../_Core/Service/films.service';
+import { FilmDetailComponent } from './film-detail/film-detail.component';
 
 
 
@@ -25,12 +28,16 @@ import { FilmsService } from '../_Core/Service/films.service';
     HomeComponent, 
     ShowTimesComponent, 
     CinemaComponent, 
-    HeaderMenuComponent, MenuSlideComponent, ItemFilmComponent, MoviePlayingComponent],
+    HeaderMenuComponent, 
+    MenuSlideComponent, 
+    ItemFilmComponent, 
+    MoviePlayingComponent, FilmDetailComponent],
     
   imports: [
     CommonModule,
     CusstomerTemplateRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [
     FilmsService

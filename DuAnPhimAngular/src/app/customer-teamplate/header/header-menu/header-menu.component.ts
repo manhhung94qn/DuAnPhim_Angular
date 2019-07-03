@@ -11,6 +11,7 @@ export class HeaderMenuComponent implements OnInit {
 
   ngOnInit() {
   }
+
   ///var
   VarShowMenuOnPhone:Boolean = false; //hide show menu
 

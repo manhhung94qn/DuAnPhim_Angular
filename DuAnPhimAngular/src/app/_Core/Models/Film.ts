@@ -1,3 +1,5 @@
+import { TableShow } from './TableShow';
+
 export class Film {
     constructor (_code,_name = "Phime", _movieDate ="Chưa có chi tiết phim", _avatar = "./assets/images/avatar_phim/1.jpg",_longTime = 0, _countLike, _price = 0){
         this.codeFilm = _code;
@@ -5,7 +7,6 @@ export class Film {
         this.movieDate = _movieDate;
         this.avatar =_avatar;
         this.longTime = _longTime;
-        this.price = _price
     }
     id: number;
     codeFilm: string;
@@ -14,19 +15,20 @@ export class Film {
     avatar: string;
     longTime: number;
     countLike: number;
-    price: number;
 }
 export class FilmsDetail {
     constructor(){
 
     }
     id: number;
-    codeFilm: string;
-    name: number;
-    description: string;
-    countLike: number;
-    longTime: number;
-    price: number;
+    name: string;
+    trailer: string;
     avatar: number;
+    description: string;
+    movieDate: string; 
+    rate: number;   
+    countRate: number;
+    longTime: number;
     moreImage: string[];
+    tableShows: TableShow[];
 }
