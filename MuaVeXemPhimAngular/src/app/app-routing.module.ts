@@ -4,7 +4,8 @@ import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   {path: "", loadChildren:() => import('./customer/customer.module').then(mod => mod.CustomerModule)},
-  {path: "admin", component: AdminComponent}
+  {path: "admin", component: AdminComponent},
+  // {path: "**", component: }
 ];
 
 @NgModule({
