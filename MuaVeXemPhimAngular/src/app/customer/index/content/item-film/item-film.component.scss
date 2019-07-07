@@ -1,0 +1,100 @@
+@import "../../../../_Core/Scss/Variable.scss";
+div {
+    .box-img {   
+        cursor: pointer;
+        margin-bottom: .8em;
+        position: relative;         
+        img {
+            width: 100%;
+            border-radius: 2px;
+            height: 338px;
+        }
+        .over-flow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(51, 51, 51, .0);
+            top: 0;
+            right: 0;
+        }
+        .play {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            transition: .1s;
+            .icon {
+                transition: .1s;
+                position: absolute;
+                top: 50%;
+                left: 45%;
+                transform: translate(-50%,-50%);  
+                width: 25px;
+                height: 25px;
+                background-color: rgb(255, 255, 255,.6);
+                clip-path: polygon(0 50%, 100% 100%, 100% 0);
+            }
+            &:hover {
+                border: 2px solid $color-text-menu;
+                background: rgba(51, 51, 51, 0.3);
+                .icon {
+                    background-color: $color-text-menu;
+                }
+            }
+        }
+    }
+
+    .box-select {
+        min-height: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .content {            
+            display: block;
+            overflow: hidden;
+            position: relative;
+            line-height: 1.2em;
+            max-height: 2.6em;
+            font-weight: 550;
+            font-size: 1.2em;
+        }
+        .button {
+            display: none;
+            width: 100%;
+            justify-content: space-around;
+            .btn-select {                
+                background-color: $color-text-menu;
+                width: 100%;
+                height: 2.5em;
+                font-size: 1.5em;
+                font-weight: 500;
+                border: none;
+                outline: none;
+            }
+        }
+    }
+
+    &:hover {
+        .box-img {
+            .over-flow {                
+                background: rgba(51, 51, 51, .2);
+            }
+            .play {
+                display: block;
+            }
+        }
+        .box-select {
+            .button {
+                display: flex;
+            }
+            .content {            
+                display: none;
+            }
+        }
+    }
+}

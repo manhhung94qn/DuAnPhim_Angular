@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/_Core/Services/data.service';
+import { Film } from 'src/app/_Core/Models/Film.class';
 
 @Component({
   selector: 'app-content',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private FimlService: DataService) { }
 
   ngOnInit() {
+    this.getListFilm()
   }
 
+  listFilm = [];
+
+  getListFilm(){
+    this.FimlService.get("/Films").subscribe((data: Film[])=>{
+      this.listFilm = data;
+      console.log(this.listFilm);
+    })
+  }
+  
 }

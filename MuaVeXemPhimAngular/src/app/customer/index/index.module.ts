@@ -13,6 +13,9 @@ import { ContentModule } from './content/content.module';
   ],
   exports: [
     IndexComponent
+  ],
+  providers: [
+    
   ]
 })
 export class IndexModule { }
