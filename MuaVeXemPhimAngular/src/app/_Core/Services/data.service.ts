@@ -11,7 +11,7 @@ let urlAPI = "";
 export class DataService {
 
   constructor(private HTTP: HttpClient) {
-    urlAPI = environment.urlAPI;
+    urlAPI = environment.urlAPIRoot;
    }
 
   get(url): Observable<any>{
@@ -37,4 +37,9 @@ export class DataService {
     return throwError(
       'Something bad happened; please try again later.');
   }
+
+
+
+  //API Link
+  getLinkFilm =() => "/Films"; //get all films
 }

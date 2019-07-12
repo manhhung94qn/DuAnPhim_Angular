@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/_Core/Services/data.service';
 import { Film } from 'src/app/_Core/Models/Film.class';
 
+
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
@@ -16,9 +17,9 @@ export class ContentComponent implements OnInit {
   }
 
   listFilm = [];
-
+  
   getListFilm(){
-    this.FimlService.get("/Films").subscribe((data: Film[])=>{
+    this.FimlService.get( this.FimlService.getLinkFilm() ).subscribe((data: Film[])=>{
       this.listFilm = data;
       console.log(this.listFilm);
     })
